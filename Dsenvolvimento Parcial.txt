@@ -1,0 +1,174 @@
+﻿3. 2 PROTÓTIPOS DA LUVA
+
+
+        Com a definição dos componentes que serão utilizados, a construção do projeto inicia-se, esta que funcionará com o sistema de prototipação evolucionária, ou seja, a construção e leitura dos dados será feita por etapas, sendo essas listadas abaixo.
+
+
+Figura . Protótipo de como será arquitetada a luva​.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fonte: As autoras, 2019.
+        
+        3. 2. 1. Acelerômetro e NodeMCU  
+        
+        Na primeira etapa o grupo tomou como desafio integrar um acelerômetro ao microcontrolador NodeMCU para realizar as medições em três eixos, identificando se o acelerômetro localiza-se na horizontal ou na vertical. 
+        Nesta etapa o grupo obteve conhecimento de como funciona a parte lógica que está por trás do objetivo do projeto. 
+        Inicialmente, a verificação foi feita com jumpers, mas após validar que a conexão era funcional, certificando que o monitor serial apresentava os dados obtidos através da agitação do acelerômetro, foram feitas as soldas nos componentes, os quais para que as conexões ficassem mais fixas.
+        Depois de efetuar a solda, os componentes foram novamente testados, para certificar-se que não estava ocorrendo nenhum curto circuito. Visto que os dados estavam sendo coletados de forma a qual era esperada, sem nenhum dano aos materiais durante a solda, os componentes integrados foram costurados em uma luva.
+        Com o sucesso obtido nesta tarefa, o próximo passo torna-se integrar dois acelerômetros na luva.
+
+
+Figura . Imagem do acelerômetro identificando que a mão encontra-se na horizontal.
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fonte: As autoras, 2019.
+
+
+
+
+        3. 2. 2 Luva com dois acelerômetros
+
+
+        O maior desafio desta etapa foi na parte da programação, onde teve que ser desenvolvido uma lógica a qual consiga realizar a leitura dos dados, todavia, não ao mesmo tempo. Isso pois o NodeMCU não consegue verificar os dados dos acelerômetros simultaneamente, fazendo com que o grupo venha a ter que realizar um algoritmo que, enquanto um acelerômetro estiver lendo os dados da aceleração, o outro estará identificado no código como desligado, quando o acelerômetro que estava lendo os dados concluir sua tarefa, ele passará a estar desligado e o que antes estava desligado passa a estar ligado.
+        Foi através de pesquisas e também por meio do conhecimento do orientador que foi alcançado o fato de que o módulo acelerômetro GY-521 possui barramento de comunicação I2C. Este é utilizado para realizar comunicação bidirecional com apenas dois sinais, sendo eles SDA e SCL. A linha SCL é responsável pelo clock do barramento, e a linha SDA pela transmissão de dados. A Figura 8 apresenta as conexões do barramento I2C.
+
+
+Figura 8. Imagem das conexões do barramento I2C.
+  
+
+Fonte: As autoras, 2019.
+
+
+        Esse barramento permite a possibilidade de utilizar, em um mesmo sistema, componentes diferentes sem que haja incompatibilidade e nem conflitos na comunicação, onde a transmissão das informações são feitas pelas portas SDA e SCL.
+        A comunicação entre o mestre e os escravos é organizada pelos endereços dos dispositivos. Os módulos GY-521 podem possuir dois endereços 0x68 ou 0x69 de acordo com o nível de tensão presente no pino A0. 
+        A leitura das acelerações dos cinco sensores é coordenada pela alteração dos endereços dos acelerômetros de modo que apenas um deles esteja configurado com o endereço 0x68. Os dados são requisitados pelo NODEMCU no endereço 0x68 e em seguida outro sensor é configurados com este endereço. Desta forma todos os sensores são lidos um de cada vez.
+
+
+Figura . Imagem da luva com dois acelerômetros conectados.
+Fonte: As autoras, 2019.  
+
+
+        Após a conexão do componente ter sido feita, ocorreram problemas, sendo eles no código programado e também no próprio acelerômetro. O acelerômetro foi danificado por conta de soldas feitas incorretamente, fazendo com que a conexão que ele possuía fosse prejudicada e tornando-se imprópria para o uso. 
+        Já no código foram realizadas algumas alterações principalmente na função Wire.endTransmission(). Esta tem sua aplicação no modo de encerrar uma transmissão que está ocorrendo nos componentes, trabalhando na forma de booleano (true ou false).  Quando o endTransmission() aceita um argumento booleano, ele altera seu comportamento de transmissão com determinados dispositivos I2C. Se o boolean estiver true o endTransmission() enviará uma mensagem de parada após a transmissão, liberando o barramento I2C. Mas se estiver false ele enviará uma mensagem de reinicialização após a transmissão. O barramento não será liberado, o que impede que outro dispositivo atrapalhe as mensagens que estão sendo enviadas. 
+
+
+        Quadro . Trecho de código, responsável por fazer a leitura de um dedo.
+50515253545556575859606162636465666768
+	void LerUmDedo() {
+
+
+  Wire.beginTransmission(MPU_addr);
+  Wire.write(0x3B);
+  Wire.endTransmission(false);
+
+
+  
+  Wire.requestFrom(MPU_addr, 14, true);
+  AcX = Wire.read() << 8 | Wire.read();
+  AcY = Wire.read() << 8 | Wire.read();
+  AcZ = Wire.read() << 8 | Wire.read();
+
+
+                     Serial.print(AcX);
+  Serial.print(“ ”); Serial.print(AcY);
+  Serial.print(“ ”); Serial.print(AcZ);
+  Serial.print(“ ”);
+  Wire.endTransmission(true);
+  delay(100);
+}
+	Fonte: As autoras, 2019.
+        Essa função foi importante já que antes o código lia valores por um determinado tempo, e após isso eram apresentados como zero. Adicionando esta função para finalizar o código o mesmo agora possui o papel de sempre reiniciar após rodar toda a função, fazendo com que os zeros deixem de aparecer de forma contínua.
+
+
+        3. 2. 3 Protótipo final da luva
+
+
+        Na terceira etapa foi feito a conexão dos outros três acelerômetros que restavam. Foi optado interligar todos juntos por conta de, quando avaliado, o maior trabalho na programação já havia sido feito, que era criar a função de ler um dedo e de fazer ler dois “simultaneamente”. Com isso feito, os seguintes acelerômetros que forem interligados precisam apenas de uma função para si, que identifica ele como ligado e os outros quatro como desligado, como mostrado no Quadro 2.
+
+
+Quadro 2. Trecho do código responsável por fazer a troca de acelerômetro.
+7172737475767778798081828384858687888990919293
+	void trocaParaDedo3() {
+  digitalWrite(D0, HIGH);
+  digitalWrite(D5, HIGH);
+  digitalWrite(D4, LOW);
+  digitalWrite(D6, HIGH);
+  digitalWrite(D7, HIGH);
+}
+
+
+void trocaParaDedo4() {
+  digitalWrite(D0, HIGH);
+  digitalWrite(D5, HIGH);
+  digitalWrite(D4, HIGH);
+  digitalWrite(D6, LOW);
+  digitalWrite(D7, HIGH);
+}
+
+
+void trocaParaDedo5() {
+  digitalWrite(D0, HIGH);
+  digitalWrite(D5, HIGH);
+  digitalWrite(D4, HIGH);
+  digitalWrite(D6, HIGH);
+  digitalWrite(D7, LOW);
+}
+	Fonte: As autoras, 2020.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Figura . Imagem da luva com todos os acelerômetros conectados.
+  
+
+Fonte: As autoras, 2020.
