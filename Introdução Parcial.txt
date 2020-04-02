@@ -69,3 +69,20 @@ RIO DO SUL – SC 2020
         Visto que é evidente a necessidade do ensinamento da Língua Brasileira de Sinais, o projeto trata como desafio principal auxiliar no melhoramento das condições dos estudantes com deficiência auditiva.
         Esta ferramenta servirá para proporcionar, de forma educativa, um jogo interativo que funcionará através de uma luva, para que o usuário tenha maior facilidade em entender seus erros e desenvolver conhecimento básico de Libras.
         O projeto pode servir tanto para alunos quanto professores, surdos ou ouvintes que tenham o objetivo de aprender as configurações básicas da Língua de Sinais.
+   
+   
+   4. OBJETIVOS
+
+	O principal intuito do projeto é confeccionar um protótipo capaz de identificar as configurações de mão do usuário, que possua baixo custo e que possa ser implantado em diversos locais por meio de um software conectado a luva.
+	O protótipo poderá melhorar aspectos sociais, sendo esta a comunicação entre pessoas surdas e ouvintes, proporcionando a inclusão social dessas pessoas.
+
+	4.1. Objetivo Geral
+
+		Desenvolver uma ferramenta de aprendizagem da Língua Brasileira de Sinais por meio de um jogo interativo.
+
+	4.2. Objetivos Específicos
+
+		1. Pesquisar e identificar sensores e métodos capazes de identificar configurações de mão.
+		2. Construir um protótipo para detectar o movimento produzido pelo usuário.
+		3. Criar um website informativo sobre as funções que a luva exerce.
+		4. Avaliar se a luva satisfaz os requisitos estipulados.
