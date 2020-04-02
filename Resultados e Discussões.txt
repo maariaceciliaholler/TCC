@@ -1,0 +1,65 @@
+﻿4 RESULTADOS E DISCUSSÃO
+
+
+        A partir dos materiais e métodos utilizados para efetuar o projeto, este apresenta seus primeiros resultados: os dados coletados na pesquisa, bem como o avanço do projeto com as primeiras informações sendo coletadas por meio do acelerômetro. Além disso, nos resultados também é apresentado o custo desembolsado para realizar a construção da luva.
+
+
+4. 1.CUSTO
+
+
+        O pagamento das peças utilizadas foi custeado pelas integrantes da equipe, tendo um gasto total de R$181,55.
+        Esse valor integra o módulo NODEMCU ESP8266, que possui valor de R$46,90 (Quarenta e seis reais e noventa centavos), com frete de R$13,90, somando um total de R$60,80. Como também os sensores acelerômetros de 3 eixos GY-521, onde cada unidade custa R$16,47, mas como o projeto necessita de um para cada dedo de uma das mãos, foram comprados cinco, além de mais quatro acelerômetros reservas, somando um total de R$148,23 com frete de R$13,90, com um gasto total de R$162,13, ambos os componentes foram comprados na loja do Mercado Livre.
+        Além disso, o projeto consta com a existência de componentes adicionais, como a luva, a linha de costura, agulha de costura e fita adesiva. A luva foi comprada pela dupla em uma loja física pelo preço de R$15,00, já os demais componentes foram doados pelas próprias estudantes, que possuíam o material necessário em casa.
+
+
+
+
+Tabela . Componentes comprados para construção do protótipo.
+Produto
+	Custo(R$)
+	
+
+	
+
+	NODEMCU ESP8266
+	R$60,80
+	
+
+	
+
+	Acelerômetros GY-521
+	R$162,13‬
+	
+
+	
+
+	Luva
+	R$15,00
+	
+
+	
+
+	Linha
+	R$5,00
+	
+
+	
+
+	Agulha
+	R$2,50
+	
+
+	
+
+	
+
+Fita Adesiva
+
+
+	R$5,00
+
+
+	Total
+
+
+	R$250,43
