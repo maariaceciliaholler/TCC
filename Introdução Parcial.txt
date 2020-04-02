@@ -1,0 +1,71 @@
+﻿Ministério da Educação  
+Secretaria de Educação Profissional e Tecnológica
+Instituto Federal Catarinense 
+Campus Rio do Sul – Unidade Urbana 
+
+
+
+
+                        AUTORAS:  Kauana Knappmann
+                                          Maria Cecilia Holler
+                                          
+
+
+
+
+
+
+
+
+
+
+TÓPICOS ESPECIAIS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RIO DO SUL – SC 2020
+
+
+1. INTRODUÇÃO        
+
+
+   1. APRESENTAÇÃO
+        
+        A inclusão social e educacional de pessoas surdas é um desafio para a educação brasileira, visto que o Brasil, segundo dados do Instituto Brasileiro de Geografia e Estatística (IBGE, 2010), possui cerca de 9,7 milhões de deficientes auditivos, totalizando 5,1% da população nacional. Deste total, cerca de 2 milhões possuem deficiência auditiva severa (1,7 milhões têm grande dificuldade para ouvir e 344,2 mil são surdos) e 7,5 milhões apresentam deficiência auditiva.
+        Segundo Strobel (2013), a Língua Brasileira de Sinais é pouco presente no cotidiano das pessoas que não são surdas e a mesma possui um ensinamento insuficiente ou inexistente em escolas, provocando dificuldade em se ter um vocabulário baseado em Libras. Isso contribui para que pessoas surdas encontrem, com frequência, obstáculos para conseguirem se incluir na sociedade.
+        Frente a estes dados, questiona-se: de que maneira a acessibilidade ao conhecimento de Libras poderia ser promovida de um modo mais simples, para que surdos possam se sentir incluídos na sociedade?
+        Paralelamente aos avanços tecnológicos, os desafios de inclusão das pessoas surdas na sociedade podem ser tratados com este projeto que visa o desenvolvimento de uma ferramenta de ensino que auxilie alunos no aprendizado da Língua de Sinais.
+        O presente projeto tem como meta o desenvolvimento e utilização de uma luva que possui sensores do tipo acelerômetros para detectar a posição e movimentos da mão e dos dedos do usuário. Esta se comunicará com um programa de computador que realizará a avaliação desses movimentos, motivando o usuário a movimentar sua mão para alcançar o objetivo: realizar as configurações de forma correta. 
+        Haja vista que seu propósito é auxiliar no ensino da Língua Brasileira de Sinais, esta ferramenta pode servir tanto para alunos quanto para professores, surdos ou ouvintes, que tenham por objetivo aprender os sinais básicos da Libras por meio de um software interativo.
+
+
+   2. PROBLEMATIZAÇÃO
+
+
+        A Língua Brasileira de Sinais é a principal forma de comunicação para pessoas com surdez ou deficiência auditiva. Esta maneira de comunicação é pouco presente no cotidiano das pessoas que não sofrem carência de audição, já que trata-se de uma outra língua. Como indicado por Vivian Boeira e Antônio Costa (s.d.), "pesquisas sobre a língua de sinais vêm mostrando que ela é comparável em complexidade e expressividade a quaisquer línguas orais. Esta língua não é uma forma do português; ao contrário, tem sua própria estrutura gramatical, que deve ser aprendida do mesmo modo que outras línguas”. 
+        Devido às dificuldades enfrentadas para ter-se conhecimento das Libras, as autoras Dall’Acqua e Maria Júlia Canazza (2014, p.15) apresentam exemplos de realidade que pessoas como Bruno enfrentam no dia a dia. Bruno é estudante surdo profundo que foi efetuar sua matrícula no ensino fundamental de uma escola, todavia, quando seus pais falaram sobre a necessidade de ter-se um intérprete a diretora revelou que não havia a disponibilidade desse profissional e que ninguém no ambiente escolar possuía conhecimento nesta área. 
+        O fato de seu ensino ser insuficiente ou inexistente em muitas escolas provoca dificuldade em ter-se um vocabulário baseado em Libras, fazendo com com que indivíduos deficientes tenham obstáculos para conseguirem se incluir na sociedade com cada vez mais frequência.
+
+
+   3. JUSTIFICATIVA
+        
+        Visto que é evidente a necessidade do ensinamento da Língua Brasileira de Sinais, o projeto trata como desafio principal auxiliar no melhoramento das condições dos estudantes com deficiência auditiva.
+        Esta ferramenta servirá para proporcionar, de forma educativa, um jogo interativo que funcionará através de uma luva, para que o usuário tenha maior facilidade em entender seus erros e desenvolver conhecimento básico de Libras.
+        O projeto pode servir tanto para alunos quanto professores, surdos ou ouvintes que tenham o objetivo de aprender as configurações básicas da Língua de Sinais.
