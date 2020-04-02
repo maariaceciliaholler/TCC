@@ -1,0 +1,129 @@
+﻿Ministério da Educação  
+Secretaria de Educação Profissional e Tecnológica
+Instituto Federal Catarinense 
+Campus Rio do Sul – Unidade Urbana 
+
+
+
+
+                        AUTORAS:  Kauana Knappmann
+                                          Maria Cecilia Holler
+                                          
+
+
+
+
+
+
+
+
+
+
+TÓPICOS ESPECIAIS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+RIO DO SUL – SC 2020
+
+
+1. INTRODUÇÃO        
+
+
+   1. APRESENTAÇÃO
+        
+        A inclusão social e educacional de pessoas surdas é um desafio para a educação brasileira, visto que o Brasil, segundo dados do Instituto Brasileiro de Geografia e Estatística (IBGE, 2010), possui cerca de 9,7 milhões de deficientes auditivos, totalizando 5,1% da população nacional. Deste total, cerca de 2 milhões possuem deficiência auditiva severa (1,7 milhões têm grande dificuldade para ouvir e 344,2 mil são surdos) e 7,5 milhões apresentam deficiência auditiva.
+        Segundo Strobel (2013), a Língua Brasileira de Sinais é pouco presente no cotidiano das pessoas que não são surdas e a mesma possui um ensinamento insuficiente ou inexistente em escolas, provocando dificuldade em se ter um vocabulário baseado em Libras. Isso contribui para que pessoas surdas encontrem, com frequência, obstáculos para conseguirem se incluir na sociedade.
+        Frente a estes dados, questiona-se: de que maneira a acessibilidade ao conhecimento de Libras poderia ser promovida de um modo mais simples, para que surdos possam se sentir incluídos na sociedade?
+        Paralelamente aos avanços tecnológicos, os desafios de inclusão das pessoas surdas na sociedade podem ser tratados com este projeto que visa o desenvolvimento de uma ferramenta de ensino que auxilie alunos no aprendizado da Língua de Sinais.
+        O presente projeto tem como meta o desenvolvimento e utilização de uma luva que possui sensores do tipo acelerômetros para detectar a posição e movimentos da mão e dos dedos do usuário. Esta se comunicará com um programa de computador que realizará a avaliação desses movimentos, motivando o usuário a movimentar sua mão para alcançar o objetivo: realizar as configurações de forma correta. 
+        Haja vista que seu propósito é auxiliar no ensino da Língua Brasileira de Sinais, esta ferramenta pode servir tanto para alunos quanto para professores, surdos ou ouvintes, que tenham por objetivo aprender os sinais básicos da Libras por meio de um software interativo.
+
+
+   2. PROBLEMATIZAÇÃO
+
+
+        A Língua Brasileira de Sinais é a principal forma de comunicação para pessoas com surdez ou deficiência auditiva. Esta maneira de comunicação é pouco presente no cotidiano das pessoas que não sofrem carência de audição, já que trata-se de uma outra língua. Como indicado por Vivian Boeira e Antônio Costa (s.d.), "pesquisas sobre a língua de sinais vêm mostrando que ela é comparável em complexidade e expressividade a quaisquer línguas orais. Esta língua não é uma forma do português; ao contrário, tem sua própria estrutura gramatical, que deve ser aprendida do mesmo modo que outras línguas”. 
+        Devido às dificuldades enfrentadas para ter-se conhecimento das Libras, as autoras Dall’Acqua e Maria Júlia Canazza (2014, p.15) apresentam exemplos de realidade que pessoas como Bruno enfrentam no dia a dia. Bruno é estudante surdo profundo que foi efetuar sua matrícula no ensino fundamental de uma escola, todavia, quando seus pais falaram sobre a necessidade de ter-se um intérprete a diretora revelou que não havia a disponibilidade desse profissional e que ninguém no ambiente escolar possuía conhecimento nesta área. 
+        O fato de seu ensino ser insuficiente ou inexistente em muitas escolas provoca dificuldade em ter-se um vocabulário baseado em Libras, fazendo com com que indivíduos deficientes tenham obstáculos para conseguirem se incluir na sociedade com cada vez mais frequência.
+
+
+   3. JUSTIFICATIVA
+        
+        Visto que é evidente a necessidade do ensinamento da Língua Brasileira de Sinais, o projeto trata como desafio principal auxiliar no melhoramento das condições dos estudantes com deficiência auditiva.
+        Esta ferramenta servirá para proporcionar, de forma educativa, um jogo interativo que funcionará através de uma luva, para que o usuário tenha maior facilidade em entender seus erros e desenvolver conhecimento básico de Libras.
+        O projeto pode servir tanto para alunos quanto professores, surdos ou ouvintes que tenham o objetivo de aprender as configurações básicas da Língua de Sinais.
+1.4 OBJETIVOS
+
+
+        O principal intuito do projeto é confeccionar um protótipo capaz de identificar as configurações de mão do usuário, que possua baixo custo e que possa ser implantado em diversos locais por meio de um software conectado a luva.
+         O protótipo poderá melhorar aspectos sociais, sendo esta a comunicação entre pessoas surdas e ouvintes, proporcionando a inclusão social dessas pessoas.
+
+
+        1.4.1 Objetivo Geral
+
+
+Desenvolver uma ferramenta de aprendizagem da Língua Brasileira de Sinais por meio de um jogo interativo.
+
+
+        1.4.2 Objetivos Específicos
+
+
+1. Pesquisar e identificar sensores e métodos capazes de identificar configurações de mão.
+2. Construir um protótipo para detectar o movimento produzido pelo usuário.
+3. Criar um website informativo sobre as funções que a luva exerce.
+4. Avaliar se a luva satisfaz os requisitos estipulados.
+
+
+1.5 METODOLOGIA
+
+
+        Devido ao fato de que o projeto caminha em paralelo com a construção do protótipo e do software em forma de jogo, o mesmo foi construído em diferentes etapas, sendo elas: pesquisa descritivas sobre métodos de identificação com análise de projetos similares, desenvolvimento do protótipo, desenvolvimento do website com informações relevantes sobre o projeto e a inclusão do jogo dentro deste site, e por fim os testes que possuem o intuito de validar o projeto.
+        A etapa de pesquisa descritiva inicia-se com uma busca por diferentes modelos e métodos de detecção para as configurações de mão, onde foram levadas em conta o custo, bem como a eficiência. 
+        Estudando sobre os possíveis materiais, o grupo conheceu dois sensores de movimento empregados em projetos semelhantes, sendo um deles os sensores flex (sensor resistivo de deformação mecânica) o qual, conforme os dedos são flexionados, a resistência varia e é por meio dela que torna-se possível a leitura dos valores numéricos e os acelerômetros. 
+        Na pesquisa também foram encontrados os sensores do tipo acelerômetro (de modelo Gy-521), os quais dispõem da função de obter informações sobre os movimentos feitos pela mão e ponta dos dedos, como o sensor flex. 
+
+
+Figura 1. Acelerômetro.
+  
+  
+
+Fonte: as autoras, 2020.
+        
+        O acelerômetro adequa-se ao projeto por conta de sua facilidade em coletar dados em X, Y e Z, proporcionando maior precisão, já que algumas das configurações do alfabeto manual utilizado pela comunidade surda brasileira diferenciam-se por apenas um dedo que localiza-se em posição diferente, como por exemplo as letras “F” e “T”, representadas na imagem a seguir, cujo dedo polegar é o único que apresenta diferença na construção de configuração, sendo o “F” com o polegar passando por trás do dedo indicador e o “T” o dedo polegar passando pela frente do indicador. Além disso, avaliando que o projeto tem o intuito de ser acessível para a sociedade, não valeria a pena um projeto caro, por conta disso optou-se pelo acelerômetro, que possui um custo menor.
+
+
+Figura 2. Semelhanças entre configurações de mão diferentes
+
+
+  
+
+Fonte: as autoras, 2019.
+        Para que esses dados sejam lidos e também enviados para um software é necessário um componente que faça a comunicação entre os acelerômetros e o computador. Por meio de pesquisas, concluiu-se que será utilizado um módulo NodeMCU ESP8266, cujo papel será fundamental no desempenho do projeto, já que é ele que irá fazer a comunicação entre os demais componentes. Os algoritmos serão programados na  linguagem C, e são eles que determinarão as tarefas que os acelerômetros devem realizar. 
+
+
+Figura 1. NodeMCU ESP8266.
+
+
+Fonte: as autoras, 2019.
+
+
+        Após o desenvolvimento do protótipo, se tem início a criação do website, onde estará disponibilizado informações relevantes do projeto, dentre elas seu objetivo, como funciona, entre outros. 
+        A construção do corpo do website se dá pela utilização de tecnologias como PHP e HTML. Seu estilo é feito através do framework MaterializeCSS e o armazenamento de dados provenientes de protótipos conectados foram armazenados em bancos de dados com o SGBD MYSQL, que utiliza a linguagem de SQL.
+A  documentação do projeto juntamente com o website estará disponibilizada no repositório online criado no GitHub, para que pessoas do mundo todo possam entender em detalhes e contribuir com o projeto.
