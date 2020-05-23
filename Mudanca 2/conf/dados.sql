@@ -3,8 +3,7 @@ USE smartglovedados;
 
 CREATE TABLE usuario (
 	CodUsuario int AUTO_INCREMENT PRIMARY KEY,
-    Senha varchar(45),
-    PalavraChave varchar(45)
+    Senha varchar(45)
 );
 CREATE TABLE administrador (
 	CodAdmin int AUTO_INCREMENT PRIMARY KEY,
@@ -15,10 +14,10 @@ insert into administrador(CodUsuario)
 values (1);
 
 #drop table livro;
-CREATE TABLE livro (
-	codLivro int AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE fotos (
+	codFoto int AUTO_INCREMENT PRIMARY KEY,
     nome varchar(1000),
-    editora varchar(500),
+    localFoto varchar(500),
     autor varchar(500),
     lancamento date,
     sinopse varchar(1500),
