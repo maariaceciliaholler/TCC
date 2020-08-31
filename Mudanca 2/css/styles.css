@@ -853,7 +853,7 @@ input[type='checkbox'] {
 
 .navbar-custom .navbar-brand.logo-image img {
   /* width: 113px;
-	height: 34px; */
+	height: 34px;  Tamanho imagem da logo*/
   width: 255px;
 	height: 110px;
 	margin-bottom: 1px;
@@ -1444,7 +1444,8 @@ input[type='checkbox'] {
 .slider-2 {
 	padding-top: 6.875rem;
 	padding-bottom: 6.875rem;
-	background-color: #2f2c3d;
+	background:url('../images/bolinhas.png')center center no-repeat;
+	background-size: cover;
 }
 
 .slider-2 .slider-container {
