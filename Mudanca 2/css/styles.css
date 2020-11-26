@@ -593,7 +593,7 @@ input[type='checkbox'] {
 
 .form-control-submit-button:hover {
 	background-color: transparent;
-	color: #4eea7f/*#00c9db*/;
+	color: #2f2c3d/*#00c9db*/;
 }
 
 /* Form Success And Error Message Formatting */
