@@ -14,7 +14,12 @@ $contador = count($imagem); // Criamos uma variavel para contar (count();) os da
 $aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatório (rand();), partindo do 1 até o número de dados que estão dentro do array..
 
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
-$cont=1;
+session_start();
+$_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
+$_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "aaaaaaaaaaaa";
+
+if($resposta == $_SESSION["correta"])
+$_SESSION["acertos"]++;
 ?>
 <head>
     <meta charset="utf-8">
@@ -74,8 +79,9 @@ $cont=1;
           <div class="card-body">
             <h5 class="card-title">Responda</h5>
             <p class="card-text">Qual letra está representada por essa configuração de mão?</p>
-            <h5><?php echo $cont;?></h5>
+            <h5><?php echo $_SESSION["acertos"];?></h5>
             <h5><?php echo $resposta;?></h5>
+            <h5><?php echo $_SESSION["correta"];?></h5>
             <form method="post">
               <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
@@ -90,52 +96,37 @@ $valor = $imagem[$aleatorio];
 if($imagem[$aleatorio] == $imagem[1]){
   echo "LETRA A";
   
-  if($resposta == "a" ){
-    echo "foi também";
-    $cont++;
-  }
+  $_SESSION["correta"] = "a";
+  echo "<br>".$_SESSION["correta"];
 }
 elseif($imagem[$aleatorio] == $imagem[2]){
   echo "LETRA b";
   
-  if($resposta == "b" ){
-    echo "foi também";
-    $cont++;
-  }
+  $_SESSION["correta"] = "b";
+
 }
 elseif($imagem[$aleatorio] == $imagem[3]){
   echo "LETRA c";
   
-  if($resposta == "c" ){
-    echo "foi também";
-    $cont++;
-  }
+  $_SESSION["correta"] = "c";
 }
 elseif($imagem[$aleatorio] == $imagem[4]){
   echo "LETRA d";
   
-  if($resposta == "d" ){
-    echo "foi também";
-    $cont++;
-  }
+  $_SESSION["correta"] = "d";
 }
 elseif($imagem[$aleatorio] == $imagem[5]){
   echo "LETRA e";
   
-  if($resposta == "e" ){
-    echo "foi também";
-    $cont++;
-  }
+  $_SESSION["correta"] = "e";
 }
 elseif($imagem[$aleatorio] == $imagem[6]){
   echo "LETRA f";
   
-  if($resposta == "f" ){
-    echo "foi também";
-    $cont++;
-  }
+  $_SESSION["correta"] = "f";
 }
-    if($cont == 5){
+    if($_SESSION["acertos"] == 5){
+      $_SESSION["acertos"] = 0;
       header('Location:homeJogo.html');
     }
 ?>
