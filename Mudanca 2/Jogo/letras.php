@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <?php
 
-include 'menu.php';
+//include 'menu.php';
 $imagem = array(); // Criamos um array com o nome das imagens.
 $imagem[1] = "../images/FasePalavras/ConfiguracaoA.png"; // Recheamos este array
 $imagem[2] = "../images/FasePalavras/ConfiguracaoB.png";
@@ -38,17 +38,20 @@ $cont=1;
             width: 50%;
         }
         #headerPopup{
-  width:75%;
-  margin:0 auto;
-}
+        width:75%;
+        margin:0 auto;
+        }
 
-#headerPopup iframe{
-  width:100%;
-  margin:0 auto;
-}
-.coluna-50 {
-    width: 50%;
-}
+        #headerPopup iframe{
+        width:100%;
+        margin:0 auto;
+        }
+        .coluna-50 {
+        width: 50%;
+        }
+        .card-body{
+          color: #000000;
+        }
     </style>
    
     <title>SMARTGLOVE - Jogo</title>
@@ -83,37 +86,55 @@ $cont=1;
     </div>
 <?php
 $valor = $imagem[$aleatorio];
-    // if($resposta == "a"){
-    //   if($imagem[$aleatorio] == $imagem[1]){
-    //     $cont= $cont+1;
-    //   }
-    // }
-    
-    // if($imagem[$aleatorio] == $imagem[1] and $resposta == "a" or  $resposta == "A" and $imagem[$aleatorio] == $imagem[1]){
-    //   echo "Parabéns!";
-    //   $cont= $cont+1;
-    // }
 
-    // if($imagem[$aleatorio] == $imagem[2] and $resposta == "b"  or $imagem[$aleatorio] == $imagem[2] and $resposta == "B"){
-    //   echo "Parabéns!";
-    //   $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[3] and $resposta == "c" or $imagem[$aleatorio] == $imagem[3] and $resposta == "C"){
-    //   echo "Parabéns!";
-    //   $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[4] and $resposta == "d" or $imagem[$aleatorio] == $imagem[4] and $resposta == "D"){
-    //   echo "Parabéns!";
-    //    $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[5] and $resposta == "e" or $imagem[$aleatorio] == $imagem[5] and $resposta == "E"){
-    //   echo "Parabéns!";
-    //    $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[6] and $resposta == "f" or $imagem[$aleatorio] == $imagem[6] and $resposta == "F"){
-    //   echo "Parabéns!";
-    //   $cont++;
-    // }
+if($imagem[$aleatorio] == $imagem[1]){
+  echo "LETRA A";
+  
+  if($resposta == "a" ){
+    echo "foi também";
+    $cont++;
+  }
+}
+elseif($imagem[$aleatorio] == $imagem[2]){
+  echo "LETRA b";
+  
+  if($resposta == "b" ){
+    echo "foi também";
+    $cont++;
+  }
+}
+elseif($imagem[$aleatorio] == $imagem[3]){
+  echo "LETRA c";
+  
+  if($resposta == "c" ){
+    echo "foi também";
+    $cont++;
+  }
+}
+elseif($imagem[$aleatorio] == $imagem[4]){
+  echo "LETRA d";
+  
+  if($resposta == "d" ){
+    echo "foi também";
+    $cont++;
+  }
+}
+elseif($imagem[$aleatorio] == $imagem[5]){
+  echo "LETRA e";
+  
+  if($resposta == "e" ){
+    echo "foi também";
+    $cont++;
+  }
+}
+elseif($imagem[$aleatorio] == $imagem[6]){
+  echo "LETRA f";
+  
+  if($resposta == "f" ){
+    echo "foi também";
+    $cont++;
+  }
+}
     if($cont == 5){
       header('Location:homeJogo.html');
     }
