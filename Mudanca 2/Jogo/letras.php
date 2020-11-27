@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <?php
 
+include 'menu.php';
 $imagem = array(); // Criamos um array com o nome das imagens.
 $imagem[1] = "../images/FasePalavras/ConfiguracaoA.png"; // Recheamos este array
 $imagem[2] = "../images/FasePalavras/ConfiguracaoB.png";
@@ -73,8 +74,7 @@ $cont=1;
             <h5><?php echo $cont;?></h5>
             <h5><?php echo $resposta;?></h5>
             <form method="post">
-              <input type="text" id="resposta" name="resposta" value="<?= (!empty($_POST['resposta']))? 
-   $_POST['resposta'] : '' ?>">
+              <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
             </form>
           </div>
@@ -82,20 +82,13 @@ $cont=1;
       </div>
     </div>
 <?php
-
+$valor = $imagem[$aleatorio];
     // if($resposta == "a"){
     //   if($imagem[$aleatorio] == $imagem[1]){
     //     $cont= $cont+1;
     //   }
     // }
-    if($imagem[$aleatorio] == $imagem[1]){
-      echo "LETRA A";
-      $cont++;
-      if($resposta == "a" or $resposta == "A"){
-        echo "foi também";
-        
-      }
-    }
+    
     // if($imagem[$aleatorio] == $imagem[1] and $resposta == "a" or  $resposta == "A" and $imagem[$aleatorio] == $imagem[1]){
     //   echo "Parabéns!";
     //   $cont= $cont+1;
