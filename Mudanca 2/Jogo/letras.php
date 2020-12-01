@@ -77,11 +77,11 @@ $_SESSION["acertos"]++;
       <div class="col">
         <div class="card" style="width: 18rem; color: black;">
           <div class="card-body">
-            <h5 class="card-title">Responda</h5>
-            <p class="card-text">Qual letra está representada por essa configuração de mão?</p>
-            <h5><?php echo $_SESSION["acertos"];?></h5>
-            <h5><?php echo $resposta;?></h5>
-            <h5><?php echo $_SESSION["correta"];?></h5>
+            <h5 class="card-title" style="color:#000;" >Responda</h5>
+            <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
+            <h5 style="color:#212529;"><?php echo $_SESSION["acertos"];?></h5>
+            <h5 style="color:#212529;"><?php echo $resposta;?></h5>
+            <h5 style="color:#212529;"><?php echo $_SESSION["correta"];?></h5>
             <form method="post">
               <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
