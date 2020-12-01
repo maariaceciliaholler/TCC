@@ -72,16 +72,16 @@ $_SESSION["acertos"]++;
     <div class="container">
       <div class="row">
         <div class="col">
-          <img src="<?php echo $imagem[$aleatorio]; ?>"/>
+          <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $imagem[$aleatorio]; ?>"/>
         </div>
       <div class="col">
-        <div class="card" style="width: 18rem; color: black;">
+        <div class="card" style="width: 18rem; color: black; margin: 0 auto;margin-top: 10em;">
           <div class="card-body">
             <h5 class="card-title" style="color:#000;" >Responda</h5>
             <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
-            <h5 style="color:#212529;"><?php echo $_SESSION["acertos"];?></h5>
+            <!-- <h5 style="color:#212529;"><?php echo $_SESSION["acertos"];?></h5>
             <h5 style="color:#212529;"><?php echo $resposta;?></h5>
-            <h5 style="color:#212529;"><?php echo $_SESSION["correta"];?></h5>
+            <h5 style="color:#212529;"><?php echo $_SESSION["correta"];?></h5> -->
             <form method="post">
               <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
@@ -94,34 +94,28 @@ $_SESSION["acertos"]++;
 $valor = $imagem[$aleatorio];
 
 if($imagem[$aleatorio] == $imagem[1]){
-  echo "LETRA A";
   
   $_SESSION["correta"] = "a";
-  echo "<br>".$_SESSION["correta"];
+  
 }
 elseif($imagem[$aleatorio] == $imagem[2]){
-  echo "LETRA b";
-  
+ 
   $_SESSION["correta"] = "b";
 
 }
 elseif($imagem[$aleatorio] == $imagem[3]){
-  echo "LETRA c";
-  
+ 
   $_SESSION["correta"] = "c";
 }
 elseif($imagem[$aleatorio] == $imagem[4]){
-  echo "LETRA d";
   
   $_SESSION["correta"] = "d";
 }
 elseif($imagem[$aleatorio] == $imagem[5]){
-  echo "LETRA e";
-  
+ 
   $_SESSION["correta"] = "e";
 }
 elseif($imagem[$aleatorio] == $imagem[6]){
-  echo "LETRA f";
   
   $_SESSION["correta"] = "f";
 }
