@@ -1,44 +1,28 @@
 <?php
-include 'letras.php';
 
-if($_POST[valor] == $imagem[1]){
-    echo "LETRA A";
-    $cont++;
-    if($_POST[resposta] == "a" ){
-      echo "foi também";
-      
-    }
-  }
+$imagem = array(); // Criamos um array com o nome das imagens.
+$imagem[1] = "../images/FasePalavras/ConfiguracaoA.png"; // Recheamos este array
+$imagem[2] = "../images/FasePalavras/ConfiguracaoB.png";
+$imagem[3] = "../images/FasePalavras/ConfiguracaoC.png";
+$imagem[4] = "../images/FasePalavras/ConfiguracaoD.png";
+$imagem[5] = "../images/FasePalavras/ConfiguracaoE.png";
+$imagem[6] = "../images/FasePalavras/ConfiguracaoF.png";
+$imagem[7] = "../images/FasePalavras/ConfiguracaoG.png";
+$imagem[8] = "../images/FasePalavras/ConfiguracaoI.png";
+$imagem[9] = "../images/FasePalavras/ConfiguracaoL.png";
+$imagem[10] = "../images/FasePalavras/ConfiguracaoM.png";
+$imagem[11] = "../images/FasePalavras/ConfiguracaoN.png";
+$imagem[12] = "../images/FasePalavras/ConfiguracaoO.png";
+$imagem[13] = "../images/FasePalavras/ConfiguracaoP.png";
+$imagem[14] = "../images/FasePalavras/ConfiguracaoQ.png";
+$imagem[15] = "../images/FasePalavras/ConfiguracaoR.png";
+$imagem[16] = "../images/FasePalavras/ConfiguracaoS.png";
+$imagem[17] = "../images/FasePalavras/ConfiguracaoT.png";
+$imagem[18] = "../images/FasePalavras/ConfiguracaoU.png";
+$imagem[19] = "../images/FasePalavras/ConfiguracaoV.png";
+$contador = count($imagem); // Criamos uma variavel para contar (count();) os dados que estão dentro do array.
+$aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatório (rand();), partindo do 1 até o número de dados que estão dentro do array..
 
-   // if($resposta == "a"){
-    //   if($imagem[$aleatorio] == $imagem[1]){
-    //     $cont= $cont+1;
-    //   }
-    // }
-    
-    // if($imagem[$aleatorio] == $imagem[1] and $resposta == "a" or  $resposta == "A" and $imagem[$aleatorio] == $imagem[1]){
-    //   echo "Parabéns!";
-    //   $cont= $cont+1;
-    // }
 
-    // if($imagem[$aleatorio] == $imagem[2] and $resposta == "b"  or $imagem[$aleatorio] == $imagem[2] and $resposta == "B"){
-    //   echo "Parabéns!";
-    //   $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[3] and $resposta == "c" or $imagem[$aleatorio] == $imagem[3] and $resposta == "C"){
-    //   echo "Parabéns!";
-    //   $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[4] and $resposta == "d" or $imagem[$aleatorio] == $imagem[4] and $resposta == "D"){
-    //   echo "Parabéns!";
-    //    $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[5] and $resposta == "e" or $imagem[$aleatorio] == $imagem[5] and $resposta == "E"){
-    //   echo "Parabéns!";
-    //    $cont= $cont+1;
-    // }
-    // if($imagem[$aleatorio] == $imagem[6] and $resposta == "f" or $imagem[$aleatorio] == $imagem[6] and $resposta == "F"){
-    //   echo "Parabéns!";
-    //   $cont++;
-    // }
+
 ?>

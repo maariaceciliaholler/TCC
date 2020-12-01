@@ -29,7 +29,7 @@ $aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatór
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
 session_start();
 $_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
-$_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "aaaaaaaaaaaa";
+$_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "a";
 
 if($resposta == $_SESSION["correta"])
 $_SESSION["acertos"]++;
@@ -186,7 +186,7 @@ elseif($imagem[$aleatorio] == $imagem[19]){
 }
     if($_SESSION["acertos"] == 5){
       $_SESSION["acertos"] = 0;
-      header('Location:homeJogo.html');
+      header('Location:palavras.php');
     }
 ?>
 </body>
