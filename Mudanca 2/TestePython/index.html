@@ -1,0 +1,17 @@
+
+<!doctype html>
+<html>
+<head>
+<title>{{msg|default('example page')}}</title>
+<link href="path/to/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='base.css')}}">
+<script src="path/to/bootstrap/js/bootstrap.min.js"></script>
+<script src="path/to/jquery/js/jquery.min.js"></script>
+</head>
+<body>
+{{nav.top.render(id='top-navbar')}}
+<h1>{{msg|default('Welcome')}}</h1>
+</body>
+</html>
