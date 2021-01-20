@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <?php
 include 'menu.php';
-?>
+?> 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -43,6 +43,7 @@ include 'menu.php';
         <a class="navbar-brand" href="../index.html" >
             <img src="../images/LogoSite.png" class="d-inline-block align-top" alt="">
         </a>
+        <h6 style="color:#212529;">Fase Palavras</h6>
     </nav>
     <div class="container">
       <div class="row">

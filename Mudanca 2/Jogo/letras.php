@@ -84,6 +84,7 @@ if($_SESSION["acertos"] == 5){
         <a class="navbar-brand" href="../index.html" >
             <img src="../images/LogoSite.png" class="d-inline-block align-top" alt="">
         </a>
+        <h6 style="color:#212529;">Fase Letras</h6>
     </nav>
 
     <div class="container">
