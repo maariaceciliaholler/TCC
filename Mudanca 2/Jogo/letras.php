@@ -29,10 +29,14 @@ $aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatór
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
 session_start();
 $_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
-$_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "a";
+$_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "";
 
 if($resposta == $_SESSION["correta"])
 $_SESSION["acertos"]++;
+
+if($_SESSION["acertos"] == 5){
+  header('Location: palavras.php');
+}
 ?>
 <head>
     <meta charset="utf-8">
