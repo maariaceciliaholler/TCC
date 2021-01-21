@@ -25,7 +25,8 @@ $aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatór
 
 
 $imagemPalavra = array(); // Criamos um array com o nome das imagens.
-$imagemPalavra[1] = "../images/FasePalavras/amor.png"; // Recheamos este array
+$imagemPalavra[1] = "../images/FasePalavras/PalavraAmor.png"; // Recheamos este array
+$imagemPalavra[2] = "../images/FasePalavras/PalavraPipa.png";
 $contadorPalavra = count($imagemPalavra); // Criamos uma variavel para contar (count();) os dados que estão dentro do array.
 $aleatorioPalavra = rand(1,$contadorPalavra); // Esta variável irá gerar um número aleatório (rand();), partindo do 1 até o número de dados que estão dentro do array..
 ?>
