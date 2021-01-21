@@ -27,6 +27,7 @@ $contador = count($imagem); // Criamos uma variavel para contar (count();) os da
 $aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatório (rand();), partindo do 1 até o número de dados que estão dentro do array..
 
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
+$resposta = strtolower($resposta);
 session_start();
 $_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
 $_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "";
@@ -119,81 +120,81 @@ $valor = $imagem[$aleatorio];
 
 if($imagem[$aleatorio] == $imagem[1]){
   
-  $_SESSION["correta"] = "a" or $_SESSION["correta"] = "A";
+  $_SESSION["correta"] = "a";
   
 }
 elseif($imagem[$aleatorio] == $imagem[2]){
  
-  $_SESSION["correta"] = "b" or $_SESSION["correta"] = "B";
+  $_SESSION["correta"] = "b";
 
 }
 elseif($imagem[$aleatorio] == $imagem[3]){
  
-  $_SESSION["correta"] = "c" or $_SESSION["correta"] = "C";
+  $_SESSION["correta"] = "c";
 }
 elseif($imagem[$aleatorio] == $imagem[4]){
   
-  $_SESSION["correta"] = "d" or $_SESSION["correta"] = "D";
+  $_SESSION["correta"] = "d";
 }
 elseif($imagem[$aleatorio] == $imagem[5]){
  
-  $_SESSION["correta"] = "e" or $_SESSION["correta"] = "E";
+  $_SESSION["correta"] = "e";
 }
 elseif($imagem[$aleatorio] == $imagem[6]){
   
-  $_SESSION["correta"] = "f" or $_SESSION["correta"] = "F";
+  $_SESSION["correta"] = "f";
 }
 elseif($imagem[$aleatorio] == $imagem[7]){
   
-  $_SESSION["correta"] = "g" or $_SESSION["correta"] = "G";
+  $_SESSION["correta"] = "g";
 }
 elseif($imagem[$aleatorio] == $imagem[8]){
   
-  $_SESSION["correta"] = "i" or $_SESSION["correta"] = "I";
+  $_SESSION["correta"] = "i";
 }
 elseif($imagem[$aleatorio] == $imagem[9]){
   
-  $_SESSION["correta"] = "l" or $_SESSION["correta"] = "L";
+  $_SESSION["correta"] = "l";
 }
 elseif($imagem[$aleatorio] == $imagem[10]){
   
-  $_SESSION["correta"] = "m" or $_SESSION["correta"] = "M";
+  $_SESSION["correta"] = "m";
 }
 elseif($imagem[$aleatorio] == $imagem[11]){
   
-  $_SESSION["correta"] = "n" or $_SESSION["correta"] = "N";
+  $_SESSION["correta"] = "n";
 }
 elseif($imagem[$aleatorio] == $imagem[12]){
   
-  $_SESSION["correta"] = "o" or $_SESSION["correta"] = "O";
+  $_SESSION["correta"] = "o";
 }
 elseif($imagem[$aleatorio] == $imagem[13]){
   
-  $_SESSION["correta"] = "p" or $_SESSION["correta"] = "P";
+  $_SESSION["correta"] = "p";
 }
 elseif($imagem[$aleatorio] == $imagem[14]){
   
-  $_SESSION["correta"] = "q" or $_SESSION["correta"] = "Q";
+  $_SESSION["correta"] = "q";
 }
 elseif($imagem[$aleatorio] == $imagem[15]){
   
-  $_SESSION["correta"] = "r" or $_SESSION["correta"] = "R";
+  $_SESSION["correta"] = "r";
 }
 elseif($imagem[$aleatorio] == $imagem[16]){
   
-  $_SESSION["correta"] = "s" or $_SESSION["correta"] = "S";
+  $_SESSION["correta"] = "s";
 }
 elseif($imagem[$aleatorio] == $imagem[17]){
   
-  $_SESSION["correta"] = "t" or $_SESSION["correta"] = "T";
+  $_SESSION["correta"] = "t";
 }
 elseif($imagem[$aleatorio] == $imagem[18]){
   
-  $_SESSION["correta"] = "u" or $_SESSION["correta"] = "U";
+  $_SESSION["correta"] = "u";
 }
 elseif($imagem[$aleatorio] == $imagem[19]){
   
-  $_SESSION["correta"] = "v" or $_SESSION["correta"] = "V";
+  $_SESSION["correta"] = "v";
 }
     if($_SESSION["acertos"] == 5){
       $_SESSION["acertos"] = 0;
