@@ -65,7 +65,9 @@ include 'menu.php'
                 cont++;
                }
             });
-         
+            
+	    alert("Página em construção!");
+      window.location="levels.html";
          </script>
    
     <title>SMARTGLOVE - Jogo</title>

@@ -34,6 +34,11 @@ include 'menu.php';
         margin:0 auto;
         }
     </style>
+
+    <script type="text/javascript">
+      alert("Página em construção!");
+      window.location="levels.html";
+    </script>
    
     <title>SMARTGLOVE - Jogo</title>
 
