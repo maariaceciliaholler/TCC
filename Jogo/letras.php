@@ -97,9 +97,13 @@ if($_SESSION["acertos"] == 5){
           <div class="card-body">
             <h5 class="card-title" style="color:#000;" >Responda</h5>
             <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
-            <!-- <h5 style="color:#212529;"><?php echo $_SESSION["acertos"];?></h5>
-            <h5 style="color:#212529;"><?php echo $resposta;?></h5>
-            <h5 style="color:#212529;"><?php echo $_SESSION["correta"];?></h5> -->
+            <h6 style="color:#212529;">
+            <?php 
+            if($resposta != $_SESSION["correta"]){
+              echo "Resposta incorreta!";
+              }
+            ?>
+            </h6>
             <form method="post">
               <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
