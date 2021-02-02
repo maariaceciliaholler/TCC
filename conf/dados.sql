@@ -14,14 +14,19 @@ insert into administrador(CodUsuario)
 values (1);
 
 #drop table livro;
-CREATE TABLE fotos (
+CREATE TABLE fotosPalavras(
 	codFoto int AUTO_INCREMENT PRIMARY KEY,
     nome varchar(1000),
-    localFoto varchar(500),
-    autor varchar(500),
-    lancamento date,
-    sinopse varchar(1500),
-    CodAdmin int,
-    img varchar(1000),
-    FOREIGN KEY (CodAdmin) REFERENCES administrador(CodAdmin)
+    valor varchar(1000)
 );
+INSERT INTO fotosPalavras(nome, valor)
+VALUES('PalavraAmor.png','amor'),
+('PalavraBala.png','bala'),
+('PalavraBola.png','bola'),
+('PalavraBule.png','bule'),
+('PalavraCasa.png','casa'),
+('PalavraCerto.png','certo'),
+('PalavraGalo.png','galo'),
+('PalavraPipa.png','pipa'),
+('PalavraVida.png','vida'),
+('PalavraVoar.png','voar');

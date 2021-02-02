@@ -35,10 +35,10 @@ include 'menu.php';
         }
     </style>
 
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       alert("Página em construção!");
       window.location="levels.html";
-    </script>
+    </script> -->
    
     <title>SMARTGLOVE - Jogo</title>
 
