@@ -39,3 +39,4 @@ VALUES('PalavraAmor.png','amor'),
 ('PalavraVoar.png','voar');
 
 SELECT * FROM palavras;
+SELECT * FROM letras;
