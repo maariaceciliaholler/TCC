@@ -13,6 +13,7 @@ CREATE TABLE administrador (
 insert into administrador(CodUsuario)
 values (1);
 
+drop table letras;
 CREATE TABLE letras(
 	codLetras int AUTO_INCREMENT PRIMARY KEY,
     imagem varchar(1000),
@@ -36,3 +37,5 @@ VALUES('PalavraAmor.png','amor'),
 ('PalavraPipa.png','pipa'),
 ('PalavraVida.png','vida'),
 ('PalavraVoar.png','voar');
+
+SELECT * FROM palavras;
