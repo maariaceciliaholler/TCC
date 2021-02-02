@@ -3,7 +3,7 @@
 <head>
 </head>
 <body>
-		<form id="form" action="" method="post">
+		<form id="form" action="sorteador.php" method="post">
 			<center>
 				<h3>Fotos Palavras</h3>
 				<fieldset class="colorir">
