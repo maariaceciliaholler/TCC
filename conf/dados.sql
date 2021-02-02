@@ -13,19 +13,19 @@ CREATE TABLE administrador (
 insert into administrador(CodUsuario)
 values (1);
 
-CREATE TABLE fotosLetras(
+CREATE TABLE letras(
 	codLetras int AUTO_INCREMENT PRIMARY KEY,
-    nomeLetras varchar(1000),
-    valorLetras varchar(1000)
+    imagem varchar(1000),
+    valor varchar(1000)
 );
 
-#drop table livro;
-CREATE TABLE fotosPalavras(
+drop table palavras;
+CREATE TABLE palavras(
 	codPalavras int AUTO_INCREMENT PRIMARY KEY,
-    nomePalavras varchar(1000),
-    valorPalavras varchar(1000)
+    imagem varchar(1000),
+    valor varchar(1000)
 );
-INSERT INTO fotosPalavras(nome, valor)
+INSERT INTO palavras(imagem, valor)
 VALUES('PalavraAmor.png','amor'),
 ('PalavraBala.png','bala'),
 ('PalavraBola.png','bola'),
