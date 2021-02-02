@@ -1,5 +1,5 @@
-CREATE DATABASE smartglovedados;
-USE smartglovedados;
+CREATE DATABASE smartglove;
+USE smartglove;
 
 CREATE TABLE usuario (
 	CodUsuario int AUTO_INCREMENT PRIMARY KEY,

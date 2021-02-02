@@ -2,9 +2,9 @@
 
     // Banco de Dados
     define('HOST', 'localhost');
-    define('DBNAME', 'smartglovedados');
-    define('USER', 'root');
-    define('PASSWORD', '');
+    define('DBNAME', 'smartglove');
+    define('USER', 'smartglove');
+    define('PASSWORD', '#Sm@rt1uva.');
 
 
 

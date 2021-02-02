@@ -200,6 +200,12 @@ elseif($imagem[$aleatorio] == $imagem[19]){
       $_SESSION["acertos"] = 0;
       header('Location:palavras.php');
     }
+$sql = "SELECT * FROM Palavras";
+$result = $PDO->query( $sql );
+$rows = $result->fetchAll();
+ 
+print_r( $rows );
 ?>
+
 </body>
 </html>

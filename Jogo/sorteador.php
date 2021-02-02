@@ -18,17 +18,23 @@ require_once "../conf/Conexao.php";
 
  
 // testes
-// $dados= "";
-// $linha= "";
 
 
-// $consulta = $pdo->query("SELECT * FROM fotosPalavras");
-// $dados = array();
-// while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
-//    echo $dados['nomePalavras'] = $linha['nomePalavras']."< ---- >";
-//    echo $dados['valorPalavras']= $linha['valorPalavras']."<br>";
+//Letras
+function letras(){
 
-// }
+$dadosLetras= "";
+$linhaLetras= "";
+
+
+$consulta = $pdo->query("SELECT * FROM Letras");
+$dadosLetras = array();
+while ($linhaLetras = $consulta->fetch(PDO::FETCH_ASSOC)) {
+   $dadosLetras['imagem'] = $linha['imagem'];
+   $dadosLetras['valor']= $linha['valor'];
+
+}
+}
 //acabou
 
 ?>
