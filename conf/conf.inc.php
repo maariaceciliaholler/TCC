@@ -1,7 +1,7 @@
 <?php
 
     // Banco de Dados
-    define('HOST', 'localhost');
+    define('HOST', '200.135.58.18');
     define('DBNAME', 'smartglove');
     define('USER', 'smartglove');
     define('PASSWORD', '#Sm@rt1uva.');
