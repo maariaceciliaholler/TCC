@@ -3,31 +3,32 @@
 <head>
 </head>
 <body>
-		<form id="form" action="sorteador.php" method="post">
+		<form id="form" action="sorteador.php"  enctype="multipart/form-data" method="post">
 			<center>
 				<h3>Fotos Palavras</h3>
 				<fieldset class="colorir">
 					<br><br>
 					<label>Download Imagem</label>
-					<input type="file" name="nomePalavras"><br><br>
+					<input type="file" name="imagem"><br><br>
 
 				    <label>Valor</label>
 				    <input type="text" name="valorPalavras"><br><br>
 
-					<input type="submit" value="Enviar">
+					<input type="submit" name="submit" value="palavras">
 				
 				</fieldset>
-
+				</form>
+				<form id="form" action="sorteador.php"  enctype="multipart/form-data" method="post">
 				<h3>Fotos Letras</h3>
 				<fieldset class="colorir">
 					<br><br>
 					<label>Download Imagem</label>
-					<input type="file" name="nomeLetras"><br><br>
+					<input type="file" name="imagem"><br><br>
 
 				    <label>Valor</label>
 				    <input type="text" name="valorLetras"><br><br>
 
-					<input type="submit" value="Enviar">
+					<input type="submit" name="submit" value="letras">
 				
 				</fieldset>
 			</center>
