@@ -2,29 +2,7 @@
 <html lang="pt-br">
 <?php
 
-//include 'menu.php';
-$imagem = array(); // Criamos um array com o nome das imagens.
-$imagem[1] = "../images/FaseLetras/ConfiguracaoA.png"; // Recheamos este array
-$imagem[2] = "../images/FaseLetras/ConfiguracaoB.png";
-$imagem[3] = "../images/FaseLetras/ConfiguracaoC.png";
-$imagem[4] = "../images/FaseLetras/ConfiguracaoD.png";
-$imagem[5] = "../images/FaseLetras/ConfiguracaoE.png";
-$imagem[6] = "../images/FaseLetras/ConfiguracaoF.png";
-$imagem[7] = "../images/FaseLetras/ConfiguracaoG.png";
-$imagem[8] = "../images/FaseLetras/ConfiguracaoI.png";
-$imagem[9] = "../images/FaseLetras/ConfiguracaoL.png";
-$imagem[10] = "../images/FaseLetras/ConfiguracaoM.png";
-$imagem[11] = "../images/FaseLetras/ConfiguracaoN.png";
-$imagem[12] = "../images/FaseLetras/ConfiguracaoO.png";
-$imagem[13] = "../images/FaseLetras/ConfiguracaoP.png";
-$imagem[14] = "../images/FaseLetras/ConfiguracaoQ.png";
-$imagem[15] = "../images/FaseLetras/ConfiguracaoR.png";
-$imagem[16] = "../images/FaseLetras/ConfiguracaoS.png";
-$imagem[17] = "../images/FaseLetras/ConfiguracaoT.png";
-$imagem[18] = "../images/FaseLetras/ConfiguracaoU.png";
-$imagem[19] = "../images/FaseLetras/ConfiguracaoV.png";
-$contador = count($imagem); // Criamos uma variavel para contar (count();) os dados que estão dentro do array.
-$aleatorio = rand(1,$contador); // Esta variável irá gerar um número aleatório (rand();), partindo do 1 até o número de dados que estão dentro do array..
+include 'ArrayLetras.php';
 
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
 $resposta = strtolower($resposta);
@@ -91,7 +69,7 @@ if($_SESSION["acertos"] == 5){
     <div class="container">
       <div class="row">
         <div class="col">
-          <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $imagem[$aleatorio]; ?>"/>
+           <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $dadosLetras[$aleatorio]; ?>"/><!-- Aqui importamos a imagem que foi sorteada na outra página -->
         </div>
       <div class="col">
         <div class="card" style="width: 18rem; color: black; margin: 0 auto;margin-top: 10em;">
@@ -116,86 +94,7 @@ if($_SESSION["acertos"] == 5){
       </div>
     </div>
 <?php
-$valor = $imagem[$aleatorio];
 
-if($imagem[$aleatorio] == $imagem[1]){
-  
-  $_SESSION["correta"] = "a";
-  
-}
-elseif($imagem[$aleatorio] == $imagem[2]){
- 
-  $_SESSION["correta"] = "b";
-
-}
-elseif($imagem[$aleatorio] == $imagem[3]){
- 
-  $_SESSION["correta"] = "c";
-}
-elseif($imagem[$aleatorio] == $imagem[4]){
-  
-  $_SESSION["correta"] = "d";
-}
-elseif($imagem[$aleatorio] == $imagem[5]){
- 
-  $_SESSION["correta"] = "e";
-}
-elseif($imagem[$aleatorio] == $imagem[6]){
-  
-  $_SESSION["correta"] = "f";
-}
-elseif($imagem[$aleatorio] == $imagem[7]){
-  
-  $_SESSION["correta"] = "g";
-}
-elseif($imagem[$aleatorio] == $imagem[8]){
-  
-  $_SESSION["correta"] = "i";
-}
-elseif($imagem[$aleatorio] == $imagem[9]){
-  
-  $_SESSION["correta"] = "l";
-}
-elseif($imagem[$aleatorio] == $imagem[10]){
-  
-  $_SESSION["correta"] = "m";
-}
-elseif($imagem[$aleatorio] == $imagem[11]){
-  
-  $_SESSION["correta"] = "n";
-}
-elseif($imagem[$aleatorio] == $imagem[12]){
-  
-  $_SESSION["correta"] = "o";
-}
-elseif($imagem[$aleatorio] == $imagem[13]){
-  
-  $_SESSION["correta"] = "p";
-}
-elseif($imagem[$aleatorio] == $imagem[14]){
-  
-  $_SESSION["correta"] = "q";
-}
-elseif($imagem[$aleatorio] == $imagem[15]){
-  
-  $_SESSION["correta"] = "r";
-}
-elseif($imagem[$aleatorio] == $imagem[16]){
-  
-  $_SESSION["correta"] = "s";
-}
-elseif($imagem[$aleatorio] == $imagem[17]){
-  
-  $_SESSION["correta"] = "t";
-}
-elseif($imagem[$aleatorio] == $imagem[18]){
-  
-  $_SESSION["correta"] = "u";
-}
-elseif($imagem[$aleatorio] == $imagem[19]){
-  
-  $_SESSION["correta"] = "v";
-}
     if($_SESSION["acertos"] == 5){
       $_SESSION["acertos"] = 0;
       header('Location:palavras.php');
