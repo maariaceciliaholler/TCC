@@ -26,17 +26,6 @@ CREATE TABLE palavras(
     imagem varchar(1000),
     valor varchar(1000)
 );
-INSERT INTO palavras(imagem, valor)
-VALUES('PalavraAmor.png','amor'),
-('PalavraBala.png','bala'),
-('PalavraBola.png','bola'),
-('PalavraBule.png','bule'),
-('PalavraCasa.png','casa'),
-('PalavraCerto.png','certo'),
-('PalavraGalo.png','galo'),
-('PalavraPipa.png','pipa'),
-('PalavraVida.png','vida'),
-('PalavraVoar.png','voar');
 
 SELECT * FROM palavras;
 SELECT * FROM letras;
