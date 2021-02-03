@@ -16,25 +16,4 @@ require_once "../conf/Conexao.php";
                 header("location:FormsAddImg.html");
 
 
- 
-// testes
-
-
-//Letras
-function letras(){
-
-$dadosLetras= "";
-$linhaLetras= "";
-
-
-$consulta = $pdo->query("SELECT * FROM Letras");
-$dadosLetras = array();
-while ($linhaLetras = $consulta->fetch(PDO::FETCH_ASSOC)) {
-   $dadosLetras['imagem'] = $linha['imagem'];
-   $dadosLetras['valor']= $linha['valor'];
-
-}
-}
-//acabou
-
 ?>
