@@ -30,6 +30,27 @@ $valorLetras = array(1);
      $valorLetras[] = $linhaLetras1['valor'];
    }
 
+
+//Respostas e verificação
+$resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
+$resposta = strtolower($resposta);
+session_start();
+$_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
+$_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "";
+
+if($resposta == $_SESSION["correta"])
+$_SESSION["acertos"]++;
+
+// if($_SESSION["acertos"] == 5){
+//   header('Location: palavras.php');
+// }
+
+if($_SESSION["acertos"] == 5){
+   $_SESSION["acertos"] = 0;
+   header('Location:palavras.php');
+ }
+
+
 //Inicia o contador
 for($i = 0; $i <= 20; $i++){
    if($dadosLetras[$aleatorio] == $valorLetras[$i]){
