@@ -16,10 +16,9 @@ $dadosLetras = array(1);
 
 //Inicia o contador e seleciona um numero aleatório
 $contador = count($dadosLetras); // Criamos uma variavel para contar (count();) os dados que estão dentro do array.
-$aleatorio = rand(1,$contador);
+$aleatorio = rand(0,$contador);
 
 //pula linha
-$valorLetras= 0;
 $linhaLetras1= 0;
 
  //Obter valor de cada imagem 
@@ -29,7 +28,7 @@ $valorLetras = array(1);
    while ($linhaLetras1 = $consulta->fetch(PDO::FETCH_ASSOC)) {
      $valorLetras[] = $linhaLetras1['valor'];
    }
-
+$contValor = count($valorLetras);
 
 //Respostas e verificação
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
@@ -50,10 +49,12 @@ if($_SESSION["acertos"] == 5){
    header('Location:palavras.php');
  }
 
+
+
 $valor = "";
 //Inicia o contador
 for($i = 0; $i <= 20; $i++){
-   if($dadosLetras[$aleatorio] == $valorLetras[$i]){
+   if($dadosLetras[$aleatorio] == $contValor[$i]){
    $valor = $valorLetras[$i];
    $_SESSION["correta"] = $valor;
 }

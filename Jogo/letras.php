@@ -73,7 +73,7 @@ include 'ArrayLetras.php';
               echo "Resposta incorreta!";
               }
             }
-             echo $valor;
+             echo "<br>".$valor;
             ?>
             </h6>
             <form method="post">
