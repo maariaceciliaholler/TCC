@@ -73,6 +73,7 @@ include 'ArrayLetras.php';
               echo "Resposta incorreta!";
               }
             }
+             echo $valor;
             ?>
             </h6>
             <form method="post">
@@ -83,6 +84,7 @@ include 'ArrayLetras.php';
         </div>
       </div>
     </div>
+    
 <?php
 
     if($_SESSION["acertos"] == 5){

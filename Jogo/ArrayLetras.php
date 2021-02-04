@@ -50,14 +50,14 @@ if($_SESSION["acertos"] == 5){
    header('Location:palavras.php');
  }
 
-
+$valor = "";
 //Inicia o contador
 for($i = 0; $i <= 20; $i++){
    if($dadosLetras[$aleatorio] == $valorLetras[$i]){
    $valor = $valorLetras[$i];
    $_SESSION["correta"] = $valor;
 }
+ 
 }
-
 
 ?>
