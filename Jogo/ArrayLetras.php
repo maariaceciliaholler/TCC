@@ -24,7 +24,7 @@ $linhaLetras1= 0;
  //Obter valor de cada imagem 
 $pdo = Conexao::getInstance();
 $consulta = $pdo->query("SELECT valor FROM letras");
-$valorLetras = array(1);
+$valorLetras = array();
    while ($linhaLetras1 = $consulta->fetch(PDO::FETCH_ASSOC)) {
      $valorLetras[] = $linhaLetras1['valor'];
    }
@@ -37,7 +37,7 @@ session_start();
 $_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
 $_SESSION["correta"] = isset($_SESSION["correta"])?$_SESSION["correta"]: "";
 
-if($resposta == $_SESSION["correta"])
+if($resposta == $consulta[$aleatorio])
 $_SESSION["acertos"]++;
 
 // if($_SESSION["acertos"] == 5){
@@ -53,12 +53,15 @@ if($_SESSION["acertos"] == 5){
 
 $valor = "";
 //Inicia o contador
-for($i = 0; $i <= 20; $i++){
-   if($dadosLetras[$aleatorio] == $contValor[$i]){
-   $valor = $valorLetras[$i];
-   $_SESSION["correta"] = $valor;
-}
+
+
+
+// for($i = 0; $i <= 20; $i++){
+//    if($dadosLetras[$aleatorio] == $contValor[$i]){
+//    $valor = $valorLetras[$i];
+//    $_SESSION["correta"] = $valor;
+// }
  
-}
+// }
 
 ?>
