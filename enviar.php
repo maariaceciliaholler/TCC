@@ -21,22 +21,25 @@ use PHPMailer\PHPMailer\Exception;
 	$mail->Host = 'smtp.gmail.com';
 	$mail->SMTPAuth = true;
 	$mail->Username = 'smartglovebr@gmail.com';
-	$mail->Password = 'smartglove01';
+	$mail->Password = '.smartglove01.';
+	$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; 
 	$mail->Port = 587;
  
 	$mail->setFrom('smartglovebr@gmail.com');
-	$mail->addAddress('smartglovebr@gmail.com');
+	$mail->addAddress('smartglovebr@gmail.com', 'SMARTGLOVE');
+	$mail->addReplyTo($email, $nome);
  
 	$mail->isHTML(true);
-	$mail->Subject = $nome;
+	$mail->Subject = "Contato - ".$nome;
 	$mail->Body = "Nome: {$nome}<br>
 				   Email: {$email}<br>
 				   Mensagem: {$mensagem}<br>
 				   Data/hora: {$data}";
  
 	if($mail->send()) {
-		echo 'Email enviado com sucesso.';
+		header('location:index.html');
 	} else {
         echo $mail->ErrorInfo;
         
 	}
+
