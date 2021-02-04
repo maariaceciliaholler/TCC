@@ -9,8 +9,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
  
-
- 
 	$nome = $_POST['cname'];
 	$email = $_POST['cemail'];
 	$mensagem = $_POST['cmessage'];
@@ -37,7 +35,7 @@ use PHPMailer\PHPMailer\Exception;
 				   Data/hora: {$data}";
  
 	if($mail->send()) {
-		header('location:index.html');
+		echo "Email enviado com sucesso!";
 	} else {
         echo $mail->ErrorInfo;
         
