@@ -68,15 +68,12 @@ include 'ArrayLetras.php';
             <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
             <h6 style="color:#212529;">
             <?php 
-            if($resposta != ""){
-            if($resposta != $_SESSION["correta"]){
-              echo "Resposta incorreta!";
-              }
-            }
-             echo "<br>".$valor;
+            
+             echo "<br>".$valorLetras[$aleatorio];
+             echo "<br>".$_SESSION["acertos"];
             ?>
             </h6>
-            <form method="post">
+            <form method="post" action="ArrayLetras.php">
               <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
             </form>
@@ -84,15 +81,5 @@ include 'ArrayLetras.php';
         </div>
       </div>
     </div>
-    
-<?php
-
-    if($_SESSION["acertos"] == 5){
-      $_SESSION["acertos"] = 0;
-      header('Location:palavras.php');
-    }
-
-?>
-
 </body>
 </html>
