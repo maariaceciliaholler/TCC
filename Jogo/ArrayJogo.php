@@ -6,7 +6,7 @@ require_once "../conf/Conexao.php";
 
 $dadosLetras= 0;
 $linhaLetras= 0;
-//Constroi um array para fazer o sorteio
+//Constroi um array para fazer o sorteio da imagem das letras
 $pdo = Conexao::getInstance();
 $consulta = $pdo->query("SELECT imagem FROM letras");
 $dadosLetras = array();
@@ -21,7 +21,7 @@ $aleatorio = rand(0,$contador-1);
 
 //pula linha
 $linhaLetras1= 0;
- //Obter valor de cada imagem 
+ //Obter valor de cada imagem das letras
 $pdo = Conexao::getInstance();
 $consulta = $pdo->query("SELECT valor FROM letras");
 $valorLetras = array();
@@ -33,7 +33,7 @@ $contValor = count($valorLetras);
 
 
 
-//Respostas e verificação
+//Respostas e verificação do nível letras
 session_start();
 $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
 $resposta = strtolower($resposta);
@@ -47,7 +47,7 @@ header('Location:letras.php');
 if($resposta != ""){
    if($resposta != $_SESSION["correta"]){
     ?><script>
-       alert("Resposta incorreta!");
+       alert("Resposta incorreta!\n Tente novamente");
       window.location="letras.php";
     </script>
      <?php
@@ -61,4 +61,5 @@ if($_SESSION["acertos"] == 5){
  }
 
 
+ // Constroi um array para fazer o sorteio da imagem das letras
 ?>
