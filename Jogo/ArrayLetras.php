@@ -42,9 +42,17 @@ $_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
 
 if($resposta == $_SESSION["correta"]){
 $_SESSION["acertos"]++;
-echo "foi";
 header('Location:letras.php');
 }
+if($resposta != ""){
+   if($resposta != $_SESSION["correta"]){
+    ?><script>
+       alert("Resposta incorreta!");
+      window.location="letras.php";
+    </script>
+     <?php
+     }
+   }
 $_SESSION["correta"] = $valorLetras[$aleatorio];
 
 if($_SESSION["acertos"] == 5){

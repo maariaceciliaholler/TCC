@@ -67,11 +67,6 @@ include 'ArrayLetras.php';
             <h5 class="card-title" style="color:#000;" >Responda</h5>
             <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
             <h6 style="color:#212529;">
-            <?php 
-            
-             echo "<br>".$valorLetras[$aleatorio];
-             echo "<br>".$_SESSION["acertos"];
-            ?>
             </h6>
             <form method="post" action="ArrayLetras.php">
               <input type="text" id="resposta" name="resposta" >
