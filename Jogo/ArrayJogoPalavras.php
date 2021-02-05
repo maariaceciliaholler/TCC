@@ -1,10 +1,10 @@
 <?php
-//palavras
+//Palavras
 include_once "../conf/default.inc.php";
 require_once "../conf/Conexao.php";
 
- // Constroi um array para fazer o sorteio da imagem das palavras
- $dadosPalavra= 0;
+// Constroi um array para fazer o sorteio da imagem das palavras
+$dadosPalavra= 0;
 $linhaPalavra= 0;
 //Pesquisa
 $pdo = Conexao::getInstance();
