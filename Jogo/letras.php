@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <?php
 
-include 'ArrayJogo.php';
+include 'ArrayJogoLetras.php';
 
 ?>
 <head>

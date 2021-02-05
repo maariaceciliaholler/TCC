@@ -3,7 +3,6 @@
 include_once "../conf/default.inc.php";
 require_once "../conf/Conexao.php";
 
-
 $dadosLetras= 0;
 $linhaLetras= 0;
 //Constroi um array para fazer o sorteio da imagem das letras
@@ -17,8 +16,6 @@ $dadosLetras = array();
 $contador = count($dadosLetras); // Criamos uma variavel para contar (count();) os dados que estão dentro do array.
 $aleatorio = rand(0,$contador-1);
 
-
-
 //pula linha
 $linhaLetras1= 0;
  //Obter valor de cada imagem das letras
@@ -29,9 +26,6 @@ $valorLetras = array();
      $valorLetras[] = $linhaLetras1['valor'];
    }
 $contValor = count($valorLetras);
-
-
-
 
 //Respostas e verificação do nível letras
 session_start();
@@ -60,6 +54,4 @@ if($_SESSION["acertos"] == 5){
    header('Location:palavras.php');
  }
 
-
- // Constroi um array para fazer o sorteio da imagem das letras
 ?>

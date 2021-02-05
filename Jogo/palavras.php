@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <?php
-include 'menu.php';
+include 'ArrayJogoPalavras.php';
 ?> 
 <head>
     <meta charset="utf-8">
@@ -53,7 +53,7 @@ include 'menu.php';
     <div class="container">
       <div class="row">
         <div class="col">
-          <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $imagemPalavra[$aleatorioPalavra]; ?>"/>
+          <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $dadosPalavra[$aleatorioPalavra]; ?>"/>
         </div>
       <div class="col">
         <div class="card" style="width: 18rem; color: black; margin: 0 auto;margin-top: 10em;">
@@ -62,7 +62,7 @@ include 'menu.php';
             <p class="card-text" style="color:#212529;" >Qual palavra está representada por essa configuração de mão?</p>
             
             <form method="post">
-              <input type="text" id="resposta" name="resposta" >
+              <input type="text" id="respostaPalavra" name="respostaPalavra" >
               <input type="submit" value="enviar">
             </form>
           </div>
