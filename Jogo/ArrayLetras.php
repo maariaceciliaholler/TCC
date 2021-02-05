@@ -39,18 +39,17 @@ $resposta=isset($_POST['resposta'])?$_POST['resposta']: "";
 $resposta = strtolower($resposta);
 
 $_SESSION["acertos"] = isset($_SESSION["acertos"])?$_SESSION["acertos"]: 0;
-$_SESSION["correta"] = $valorLetras[$aleatorio];
 
-if($resposta == $_SESSION["correta"])
+if($resposta == $_SESSION["correta"]){
 $_SESSION["acertos"]++;
-
-// if($_SESSION["acertos"] == 5){
-//   header('Location: palavras.php');
-// }
+echo "foi";
+header('Location:letras.php');
+}
+$_SESSION["correta"] = $valorLetras[$aleatorio];
 
 if($_SESSION["acertos"] == 5){
    $_SESSION["acertos"] = 0;
-   //header('Location:palavras.php');
+   header('Location:palavras.php');
  }
 
 
