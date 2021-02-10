@@ -85,7 +85,7 @@ include 'ArrayJogoLetras.php';
     <header id="kauana">
   <div class="intro-text">
   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<h1 class="name-index">PARABÉNS, VOCÊ </br></br><span>TERMINOU!</span></h1>
-    <img src="../images/Detalhes/obrigada.gif" width="400" height="400"></img>
+    <img src="../images/Detalhes/obrigada.gif" width="400"></img>
   </div>
 </header>
       
