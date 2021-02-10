@@ -7,8 +7,7 @@ include 'ArrayJogoLetras.php';
 ?>
 <head>
     <meta charset="utf-8">
-    <!-- Favicon  -->
-    <link rel="icon" href="images/Detalhes/GloveLogo.png">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -19,9 +18,10 @@ include 'ArrayJogoLetras.php';
     <link href="css/swiper.css" rel="stylesheet">
 	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="../css/styles.css" rel="stylesheet">
-    
+    <!-- Favicon  -->
+    <link rel="icon" href="../images/Detalhes/GloveLogo.png">
     <style>
-       img{
+       #img{
             display: block;
             margin-left: auto;
             margin-right: auto;
@@ -78,14 +78,14 @@ include 'ArrayJogoLetras.php';
 <body class="header">
     <nav class="navbar navbar bg" >
         <a class="navbar-brand" href="../index.html" >
-            <img src="../images/LogoSite.png" class="d-inline-block align-top" alt="">
+            <img id="img" src="../images/LogoSite.png" class="d-inline-block align-top" alt="">
         </a>
         <a href="../index.html" ><h6 style="color:#212529;">Voltar ao site</h6></a>
     </nav>
     <header id="kauana">
   <div class="intro-text">
   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<h1 class="name-index">PARABÉNS, VOCÊ </br></br><span>TERMINOU!</span></h1>
-    <img src="../images/Detalhes/obrigada.gif" width="400"></img>
+    <img src="../images/Detalhes/obrigada.gif" width="500"></img>
   </div>
 </header>
       
