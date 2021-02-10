@@ -43,13 +43,13 @@ include 'ArrayJogoAleatorio.php'
         <a class="navbar-brand" href="../index.html" >
             <img src="../images/LogoSite.png" class="d-inline-block align-top" alt="">
         </a>
+        <h6 style="color:#212529;">Fase Aleatório</h6>
     </nav>
 
     <div class="container">
       <div class="row">
         <div class="col">
-          <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $mesclagem[$aleatorioAleatorio]; ?>"/>
-
+          <img style=" margin: 0 auto;margin-top: 5em; max-width:500px; max-height:250px; width: auto; height: auto;" src="<?php echo $mesclagem[$aleatorioAleatorio]; ?>"/>
         </div>
       <div class="col">
         <div class="card" style="width: 18rem; color: black; margin: 0 auto;margin-top: 10em;">
