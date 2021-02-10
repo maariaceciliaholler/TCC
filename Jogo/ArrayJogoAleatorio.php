@@ -51,7 +51,6 @@ $aleatorioAleatorio = rand(0,$contadorAleatorio-1);
 
 //mesclar os valores
 $mesclagemValores = array_merge($valorLetras1,$valorPalavra);
-echo $mesclagemValores[$aleatorioAleatorio];
 
 //Respostas e verificação do nível aleatório
 session_start();
@@ -60,24 +59,6 @@ $resposta11 = strtolower($resposta11);
 
 $_SESSION["acertos11"] = isset($_SESSION["acertos11"])?$_SESSION["acertos11"]: 0;
 
-if($resposta11 == $_SESSION["correta11"]){
-$_SESSION["acertos11"]++;
-echo "Você acertou!";
-header('Location:aleatorio.php');
-}
-if($resposta11 != ""){
-   if($resposta11 != $_SESSION["correta11"]){
-    ?><script>
-       alert("Resposta incorreta!\n Tente novamente");
-      window.location="aleatorio.php";
-    </script>
-     <?php
-     }
-   }
 $_SESSION["correta11"] = $mesclagemValores[$aleatorioAleatorio];
 
-if($_SESSION["acertos11"] == 5){
-   $_SESSION["acertos11"] = 0;
-   header('Location:parabens.php');
- }
 ?>

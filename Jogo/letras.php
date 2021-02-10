@@ -68,7 +68,33 @@ include 'ArrayJogoLetras.php';
             <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
             <h6 style="color:#212529;">
             </h6>
-            <form method="post" action="ArrayLetras.php">
+            <?php
+
+//verifica se a palavra está correta, e mostra mensagem em verde
+if(isset($_SESSION["novaLetras"]))
+  if($_SESSION["novaLetras"] == $resposta){
+  $_SESSION["acertos"]++;
+  echo "<b><font color=\"#00FF00\">Você acertou a questão anterior!</font></b>" ;
+}
+
+// verifica se a palavra está errada, e mostra mensagem em vermelho
+  
+if($resposta != ""){
+  if($resposta != $_SESSION["novaLetras"]){
+      echo "<b><font color=\"FF#0000\">Você errou a questão anterior</font></b>" ;
+      }
+    }
+
+$_SESSION["novaLetras"] = $_SESSION["correta"];
+
+//verifica se já existe 5 pontos
+if($_SESSION["acertos"] >= 5){
+   $_SESSION["acertos"] = 0;
+   header('Location:palavras.php');
+ }
+
+?>
+            <form method="post">
               <input type="text" id="resposta" name="resposta" >
               <input type="submit" value="enviar">
             </form>

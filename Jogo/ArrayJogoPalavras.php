@@ -34,22 +34,5 @@ $respostaPalavra = strtolower($respostaPalavra);
 
 $_SESSION["acertosPalavra"] = isset($_SESSION["acertosPalavra"])?$_SESSION["acertosPalavra"]: 0;
 
-if($respostaPalavra == $_SESSION["correta"]){
-$_SESSION["acertosPalavra"]++;
-header('Location:palavras.php');
-}
-if($respostaPalavra != ""){
-   if($respostaPalavra != $_SESSION["correta"]){
-    ?><script>
-       alert("Resposta incorreta!\n Tente novamente");
-      window.location="palavras.php";
-    </script>
-     <?php
-     }
-   }
-$_SESSION["correta"] = $valorPalavra[$aleatorioPalavra];
 
-if($_SESSION["acertosPalavra"] == 5){
-   $_SESSION["acertosPalavra"] = 0;
-   header('Location:aleatorio.php');
- }
+$_SESSION["correta"] = $valorPalavra[$aleatorioPalavra];

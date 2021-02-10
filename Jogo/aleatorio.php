@@ -49,13 +49,38 @@ include 'ArrayJogoAleatorio.php'
       <div class="row">
         <div class="col">
           <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $mesclagem[$aleatorioAleatorio]; ?>"/>
+
         </div>
       <div class="col">
         <div class="card" style="width: 18rem; color: black; margin: 0 auto;margin-top: 10em;">
           <div class="card-body">
             <h5 class="card-title" style="color:#000;" >Responda</h5>
             <p class="card-text" style="color:#212529;" >Qual letra está representada por essa configuração de mão?</p>
-            <form method="post" action="ArrayJogoAleatorio.php">
+             <?php 
+
+            //verifica se a resposta está correta, e mostra mensagem em verde
+            if(isset($_SESSION["novaAleatorio"]))
+              if($resposta11 == $_SESSION["novaAleatorio"]){
+                $_SESSION["acertos11"]++;
+                echo "<b><font color=\"#00FF00\">Você acertou a questão anterior!</font></b>" ;
+              }
+              
+              // verifica se a resposta está errada, e mostra mensagem em vermelho
+              if($resposta11 != ""){
+                 if($resposta11 != $_SESSION["novaAleatorio"]){
+                  echo "<b><font color=\"FF#0000\">Você errou a questão anterior</font></b>" ;
+                  }
+              }
+
+              $_SESSION["novaAleatorio"] = $_SESSION["correta11"];
+
+              //verifica se já existe 5 pontos
+                 if($_SESSION["acertos11"] >= 5){
+                  $_SESSION["acertos11"] = 0;
+                  header('Location:parabens.php');
+                }
+              ?>
+            <form method="post" >
               <input type="text" id="resposta11" name="resposta11" >
               <input type="submit" value="enviar">
             </form>

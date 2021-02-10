@@ -35,11 +35,6 @@ include 'ArrayJogoPalavras.php';
         }
     </style>
 
-    <!-- <script type="text/javascript">
-      alert("Página em construção!");
-      window.location="levels.html";
-    </script> -->
-   
     <title>SMARTGLOVE - Jogo</title>
 
 </head>
@@ -53,7 +48,7 @@ include 'ArrayJogoPalavras.php';
     <div class="container">
       <div class="row">
         <div class="col">
-          <img style=" margin: 0 auto;margin-top: 5em;" src="<?php echo $dadosPalavra[$aleatorioPalavra]; ?>"/>
+          <img style=" margin: 0 auto;margin-top: 5em; max-width:500px; max-height:250px; width: auto; height: auto;" src="<?php echo $dadosPalavra[$aleatorioPalavra]; ?>"/>
         </div>
       <div class="col">
         <div class="card" style="width: 18rem; color: black; margin: 0 auto;margin-top: 10em;">
@@ -61,6 +56,31 @@ include 'ArrayJogoPalavras.php';
             <h5 class="card-title" style="color:#000;" >Responda</h5>
             <p class="card-text" style="color:#212529;" >Qual palavra está representada por essa configuração de mão?</p>
             
+<?php
+
+//verifica se a palavra está correta, e mostra mensagem em verde
+if(isset($_SESSION["novaPalavras"]))
+if($_SESSION["novaPalavras"] == $respostaPalavra){
+  $_SESSION["acertosPalavra"]++;
+  echo "<b><font color=\"#00FF00\">Você acertou a questão anterior!</font></b>" ;
+  }
+
+// verifica se a palavra está errada, e mostra mensagem em vermelho
+  if($respostaPalavra != ""){
+    if($respostaPalavra != $_SESSION["novaPalavras"]){
+      echo "<b><font color=\"FF#0000\">Você errou a questão anterior</font></b>" ;
+      }
+    }
+
+$_SESSION["novaPalavras"] = $_SESSION["correta"];
+
+//verifica se já existe 5 pontos
+if($_SESSION["acertosPalavra"] >= 5){
+   $_SESSION["acertosPalavra"] = 0;
+   header('Location:aleatorio.php');
+ }
+?>
+
             <form method="post">
               <input type="text" id="respostaPalavra" name="respostaPalavra" >
               <input type="submit" value="enviar">
